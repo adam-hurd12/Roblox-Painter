@@ -1,11 +1,12 @@
 # Roblox-Painter
-Simple multiplayer game to showcase a custom grid-based item selection and placement system, developed using the Luau scripting language. 
+Simple grid-based item selection and placement system, developed using the Luau scripting language.
 
 ## Overview
-*Painting Game* on Roblox is a basic showcase of a fully implemented custom item placement system on a grid. Currently, the items shown are simple colour blocks but can be modularly and easily changed by adding to the 'Items' folder (not shown in repository). Features basic UI and controls to demonstrate the capabilities of such a system. Based on the placement systems seen in games such as [Miner's Haven (Roblox)](https://www.roblox.com/games/258258996/Miners-Haven-Sandbox-Tycoon). The system is fully scalable and an infinite amount of placeables can be added, with no additional code required. All code is held within the src/ folder.
+*Roblox Painter* is a fully modular item placement system on a customisable-sized grid. The items to be placed are easily changed by adding to an 'Items' folder (not shown in repository). The showcase game on Roblox features basic UI and controls to demonstrate the capabilities of such a system. Based on the placement systems seen in games such as [Miner's Haven (Roblox)](https://www.roblox.com/games/258258996/Miners-Haven-Sandbox-Tycoon). The system is fully scalable and an infinite amount of placeables can be added, with no additional code required. All code is held within the src/ folder.
 
 ## Key Features
 - Custom item selection and placement system
+- Custom state handling, for placing and deleting
 - Basic interactive GUI for user experience
 - Fully modular code
 
@@ -16,7 +17,7 @@ Simple multiplayer game to showcase a custom grid-based item selection and place
 - Object-oriented programming, utilising ModuleScripts as classes
 
 ## Note
-This repository only holds the scripts required to run the placement system. I am currently developing and shipping the entire system as a model / plugin for Roblox Studio, so that others can use it in their projects.
+This repository only holds the scripts required to run the placement system. I have shipped the entire system as a model for the Roblox Studio toolbox, so that others can use it in their projects, along with an in-depth README containing instructions to get the system working.
 
 ## Author
 **Adam Hurd**  
