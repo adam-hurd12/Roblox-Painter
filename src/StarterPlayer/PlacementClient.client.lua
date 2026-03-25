@@ -24,9 +24,9 @@ end
 
 -- connect dragging + mouse click
 mouse.Move:Connect(function()
-
+	
 	if not UIS:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) then return end
-
+	
 	OnMouseClick()
 end)
 
@@ -38,12 +38,15 @@ player.AttributeChanged:Connect(function(attr: string)
 
 		if player:GetAttribute(attr) ~= '' then player:SetAttribute('Delete', false) end
 
-		for _, button in ipairs(player.PlayerGui.Inventory.ItemContainer:GetChildren()) do
+		for _, itemContainer in ipairs(player.PlayerGui.Inventory.ItemContainer:GetChildren()) do
+			
+			for _, button in ipairs(itemContainer:GetChildren()) do
 
-			if button:IsA('TextButton') then
+				if button:IsA('TextButton') then
 
-				button.TextColor3 = Color3.fromHex('#d6d6d6')	-- this color is the standard text color for unselected buttons
-				if button.Text == player:GetAttribute(attr) then button.TextColor3 = Color3.fromRGB(0, 170, 127) end		-- this color is the color of the selected item button
+					button.TextColor3 = Color3.fromHex('#d6d6d6')	-- this color is the standard text color for unselected buttons
+					if button.Text == player:GetAttribute(attr) then button.TextColor3 = Color3.fromRGB(0, 170, 127) end		-- this color is the color of the selected item button
+				end
 			end
 		end
 	end
