@@ -54,6 +54,11 @@ end
 
 function Item.PlaceItem(player: Player, tile: Part): boolean
 	local item = Item.GetCurrentItem(player)
+
+	local mapnum = tile.Parent.Name
+	local InteractedMap = workspace.Maps:FindFirstChild(mapnum)
+	
+	if InteractedMap:GetAttribute('UserId') ~= player.UserId then warn('attempt to place on unowned map.') ; return false end
 	
 	if not item or not item:IsA('Model') then warn('current item is not valid.'); return false end
 	if tile:GetAttribute('Item') ~= '' then warn('attempt to place more than one item on a single tile.') ; return false end
